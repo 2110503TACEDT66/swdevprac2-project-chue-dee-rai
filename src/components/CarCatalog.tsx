@@ -7,7 +7,7 @@ export default async function CarCatalog({carJson}: {carJson:Promise<CarJson>}){
 	
 	return (
 		<>
-		Explore {carJsonReady.count} models in our catalog
+		We have {carJsonReady.count} models
 		<div style = {{margin : "20px", display: "flex", flexDirection: "row",
 			flexWrap: "wrap", justifyContent: "space-around", alignContent: "space-around", padding: "10px"}}>
 			{

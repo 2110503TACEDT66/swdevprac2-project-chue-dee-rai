@@ -30,10 +30,11 @@ export default async function CarDetailPage( {params} : {params: {cid:string}}) 
 
 	return (
 		<main className="text-center p-5">
-			<h1 className="text-lg font-medium">{carDetail.data.model}</h1>
-			<div className="flex flex-row my-5">
-				<Image src = {carDetail.data.image} alt = 'Car Image' width = {0} height={0} sizes = "100vw" className="rounded-lg w-[30%] bg-black"/>
-				<div className="text-md mx-5 text-left spacing-y-4">{carDetail.data.name}
+			<h1 className="text-3xl font-medium bg-gray-300 rounded-lg w-[50%] mx-[25%]">Car Detail</h1>
+			<div className="flex flex-col my-5 mx-[25%] bg-slate-400  rounded-lg">
+				<Image src = {carDetail.data.image} alt = 'Car Image' width = {0} height={0} sizes = "100vw" className="rounded-t-lg w-[100%] bg-black"/>
+				<div className="text-2xl m-2">{carDetail.data.name}</div>
+				<div className="text-md spacing-y-4">
 					{/* <div className="text-md mx-5">Doors: {carDetail.data.doors}</div>
 					<div className="text-md mx-5">Seats: {carDetail.data.seats}</div>
 					<div className="text-md mx-5">Large Bags: {carDetail.data.largebags}</div>
@@ -42,20 +43,22 @@ export default async function CarDetailPage( {params} : {params: {cid:string}}) 
 
 						
 					{/* <div className="text-md mx-5">Name : {carDetail.data.name}</div> */}
-					<div className="text-md mx-5">Address : {carDetail.data.address}</div>
-					<div className="text-md mx-5">District : {carDetail.data.district}</div>
-					<div className="text-md mx-5">Postalcode : {carDetail.data.postalcode}</div>
-					<div className="text-md mx-5" >Province : {carDetail.data.province}</div>
-					<div className="text-md mx-5">Telephone : {carDetail.data.tel}</div>
-					<div className="text-md mx-5">LicensePlate : {carDetail.data.licensePlate}</div>
-				
-					<div></div>
-					<Link href={`/reservations?id=${params.cid}&model=${carDetail.data.name}&userid=${profile.data._id}&token=${session.user.token}`}>
-						<button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm">
-							Make Reservation
-						</button>
-					</Link>
+					<div className="text-left mx-[0%] md:mx-[10%] lg:mx-[15%] xl:mx-[20%] 2xl:mx-[25%] 3xl:mx-[30%] px-20">
+						<div className="text-md mx-5">Address : {carDetail.data.address}</div>
+						<div className="text-md mx-5">District : {carDetail.data.district}</div>
+						<div className="text-md mx-5">Postalcode : {carDetail.data.postalcode}</div>
+						<div className="text-md mx-5" >Province : {carDetail.data.province}</div>
+						<div className="text-md mx-5">Telephone : {carDetail.data.tel}</div>
+						<div className="text-md mx-5">LicensePlate : {carDetail.data.licensePlate}</div>
+						
+						<Link href={`/reservations?id=${params.cid}&model=${carDetail.data.name}&userid=${profile.data._id}&token=${session.user.token}`} className="block rounded-md mx-5 bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm text-center my-2">
+								Make Reservation
+						</Link>
+						
+					</div>
 					
+					
+				
 				</div>
 			</div>
 		</main>
