@@ -14,8 +14,6 @@ export default async function TopMenu(){
 		profile = await getUserProfile(session?.user.token);
 	}
 	// console.log(session)
-	
-	
 
 	return (
 		<div className={styles.menucontainer}>
@@ -30,7 +28,8 @@ export default async function TopMenu(){
 			
 			<div className='flex flex-row absolute right-0 h-full'>
 				{
-					(profile.data.role == "admin")?<div>Admin</div>:null
+					(profile.data.role == "admin")?<div className='w-[120px] text-center mt-auto mb-auto'>
+						Admin</div>:null
 				}
 				<TopMenuItem title= 'Booking' pageRef='/cart'/>
 				{
