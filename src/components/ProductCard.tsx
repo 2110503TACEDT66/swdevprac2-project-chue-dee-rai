@@ -13,7 +13,7 @@ export default function ProductCard( {carName, onCompare} : {carName:CarItem, on
 				fill = {true}
 				className='object-cover rounded-t-lg'/>
 			</div>
-			<div className='w-full h-[30px] p-[10px] text-left'>
+			<div className='w-full h-[30px] p-[10px] text-center'>
 				{carName.name}
 			</div>
 			{
