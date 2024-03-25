@@ -3,7 +3,7 @@ import getCar from "@/libs/getCar"
 import Link from "next/link";
 import { getServerSession } from "next-auth";
 import getUserProfile from "@/libs/getUserProfile";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 
 export default async function CarDetailPage( {params} : {params: {cid:string}}) {
 	

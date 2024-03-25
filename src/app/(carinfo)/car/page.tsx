@@ -5,7 +5,7 @@ import { LinearProgress } from "@mui/material";
 import { useSession } from "next-auth/react";
 import getUserProfile from "@/libs/getUserProfile";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import Link from "next/link";
 
 
