@@ -1,7 +1,7 @@
 export default async function updateBooking( { reservetionItem, bookingid, token } : { reservetionItem: ReservationItem, bookingid: string, token: string } ){
 	console.log(reservetionItem.endDate)
 	console.log(reservetionItem.startDate)
-	const response = await fetch(`http://localhost:5000/api/v1/bookings/${bookingid}`,{
+	const response = await fetch(`${process.env.BACKEND_URL}/api/v1/bookings/${bookingid}`,{
 		method: "PUT",
 		headers: {
 			"Content-Type":"application/json",

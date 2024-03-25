@@ -1,7 +1,7 @@
 export default async function createBooking( { reservetionItem, carid, token } : { reservetionItem: ReservationItem, carid: string, token: string } ){
 	console.log(reservetionItem.endDate)
 	console.log(reservetionItem.startDate)
-	const response = await fetch(`http://localhost:5000/api/v1/cars/${carid}/bookings`,{
+	const response = await fetch(`${process.env.BACKEND_URL}/api/v1/cars/${carid}/bookings`,{
 		// mode: 'no-cors',
 		method: "POST",
 		headers: {
