@@ -4,6 +4,7 @@ import styles from './banner.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 
 export default function Banner () {
 	const covers = ['/img/cover.jpg', '/img/cover2.jpg', '/img/cover3.jpg']

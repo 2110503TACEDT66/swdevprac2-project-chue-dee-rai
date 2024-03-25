@@ -5,6 +5,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import getBookings from "@/libs/getBookings";
 import { useEffect } from "react";
 import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 
 
@@ -12,7 +13,9 @@ export default async function CartPage (){
 	
 	const session = await getServerSession(authOptions);
 
-	if(!session || !session.user.token) return null
+	if(!session || !session.user.token){
+		redirect('/api/auth/signin')
+	}
 	
 	const booking = await getBookings(session.user.token);
 	return (

@@ -33,7 +33,8 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 
 	return (
 		<>
-			<button className="p-5" onClick={()=>{window.location.reload();}}>Refetch</button>
+			<div className="mt-[40px]">
+			<button className="mx-5 p-2 border rounded-xl bg-violet-200 hover:bg-violet-500" onClick={()=>{window.location.reload();}}>Refetch</button>
 			<div className="space-y-5">
 				{
 					bookingJson?
@@ -43,8 +44,8 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 							<div className="text-sm">Pick-up : {reservationItem.startDate} </div>
 							<div className="text-sm">Return :  {reservationItem.endDate}</div>
 							{/* <div className="text-md">Duration: {reservationItem.startDate}</div> */}
-							<div className="flex flex-row space-x-2">
-								<button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={()=>{DeleteBooking(reservationItem._id)}}>
+							<div className="flex flex-row space-x-2 my-1">
+								<button className="block rounded-md bg-purple-600 hover:bg-red-600 px-3 py-2 text-white shadow-sm" onClick={()=>{DeleteBooking(reservationItem._id)}}>
 									Remove from Cart
 								</button>
 								<Link href={`/updatereservation?id=${reservationItem._id}`}>
@@ -60,6 +61,7 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 						There No Booking
 					</div>
 				}
+			</div>
 			</div>
 		</>
 

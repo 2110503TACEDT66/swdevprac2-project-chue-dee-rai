@@ -19,11 +19,12 @@ export default async function TopMenu(){
 
 	return (
 		<div className={styles.menucontainer}>
+			<Link href='/'>
 			<Image src = '/img/logo.png' className={styles.logoimg}
 			alt = 'logo'
 			width = {0}
 			height = {0}
-			sizes= '100vh'/>
+			sizes= '100vh'/></Link>
 			<TopMenuItem title = 'Select Car' pageRef = '/car'/>
 			
 			

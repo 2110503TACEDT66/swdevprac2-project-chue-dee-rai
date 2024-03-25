@@ -86,22 +86,22 @@ export default function Reservations () {
 	// const [returnLocation, setReturnLocation] = useState<string>('BKK');
 
 	return (
-		<main className="w-[100%] flex flex-col items-center space-y-4">
+		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[40px]">
 			<div className="text-xl font-medium">New Reservation</div>
 			<div className="text-xl font-medium">Car: {model}</div>
 
-
+			<div className="w-auto bg-slate-100 rounded-xl p-20 content-center flex flex-col">
 			<form action = {addBooking} className="w-fit space-y-2">
-				<div className="text-medium text-left text-gray-600">Pick-Up Date</div>
+				<div className="text-medium text-gray-600 text-center">Pick-Up Date</div>
 				<LocationDateReserve onDateChange = {(value:Dayjs)=>{setPickupDate(value)}} /*onLocationChange={(value:string) => {setPickupLocation(value)}}*//>
-				<div className="text-medium text-left text-gray-600">Return Date</div>
+				<div className="text-medium text-gray-600 text-center">Return Date</div>
 				<LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}} /*onLocationChange={(value:string)=>{setReturnLocation(value)}}*//>
 				{/* <input type="time">dada</input> */}
 			</form>
-			
-			<button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={addBooking}>
+			<button className="block rounded-xl bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm my-7" onClick={addBooking}>
 				Reserve this Car
 			</button>
+			</div>
 			
 		</main>
 	);

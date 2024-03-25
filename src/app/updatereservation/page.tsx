@@ -72,7 +72,7 @@ export default function Reservations () {
 	// const [returnLocation, setReturnLocation] = useState<string>('BKK');
 
 	return (
-		<main className="w-[100%] flex flex-col items-center space-y-4">
+		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[40px]">
 			<div className="text-xl font-medium">Update Reservation</div>
 			{/* <div className="text-xl font-medium">Car: {model}</div> */}
 
