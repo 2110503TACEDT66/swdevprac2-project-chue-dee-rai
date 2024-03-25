@@ -20,7 +20,7 @@ export default function Banner () {
 			alt = 'cover'
 			fill = {true}
 			priority
-			objectFit = 'cover'/>
+			className='object-cover'/>
 			<div className={styles.bannerText}>
 				<h1 className='text-6xl my-3 text-white font-medium font-serif'>Car Rental</h1>
 				<h3 className='text-2xl text-white font-serif'>Get out and explore with Us</h3>
