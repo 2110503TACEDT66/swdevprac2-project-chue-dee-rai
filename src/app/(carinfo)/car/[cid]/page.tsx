@@ -43,7 +43,7 @@ export default async function CarDetailPage( {params} : {params: {cid:string}}) 
 
 						
 					{/* <div className="text-md mx-5">Name : {carDetail.data.name}</div> */}
-					<div className="text-left mx-[0%] md:mx-[10%] lg:mx-[15%] xl:mx-[20%] 2xl:mx-[25%] 3xl:mx-[30%] px-20">
+					<div className="text-left mx-[0%] md:mx-[10%] lg:mx-[15%] xl:mx-[20%] 2xl:mx-[25%] 3xl:mx-[30%] ">
 						<div className="text-md mx-5">Address : {carDetail.data.address}</div>
 						<div className="text-md mx-5">District : {carDetail.data.district}</div>
 						<div className="text-md mx-5">Postalcode : {carDetail.data.postalcode}</div>
