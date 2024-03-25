@@ -3,11 +3,8 @@ import LocationDateReserve from "@/components/LocationDateReserve";
 import { redirect, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
-
 import createBooking from "@/libs/createBooking";
 import { useRouter } from "next/navigation";
-
-
 
 export default function Reservations () {
 
@@ -50,42 +47,14 @@ export default function Reservations () {
 					createdAt : dayjs(new Date().toDateString()).format('YYYY/MM/DD')
 				}
 				const cars = await createBooking({reservetionItem: item, carid: cid, token:token})
-				// dispatch(addReservation(item))
 				
 				router.push("/cart")
 			}
 		
 	}
 
-	// const session = await getServerSession(authOptions)
-
-	// if(!session || !session.user.token) return null
-	
-	// const profile = await getUserProfile(session.user.token);
-	// var createdAt = new Date(profile.data.createdAt);
-	
-
-	// const dispatch = useDispatch<AppDispatch>()
-
-	// const makeReservation = async ()=> {
-	// 	if (cid && model && pickupDate && returnDate && userid && token){
-	// 		const item:ReservationItem = {
-	// 			startDate : dayjs(pickupDate).format('YYYY/MM/DD'),
-	// 			endDate : dayjs(returnDate).format('YYYY/MM/DD'),
-	// 			user: userid,
-	// 			car: cid,
-	// 			createdAt : dayjs(new Date().toDateString()).format('YYYY/MM/DD')
-	// 		}
-			
-	// 		// dispatch(addReservation(item))
-	// 		redirect("/cart")
-	// 	}
-	// }
-
 	const [pickupDate, setPickupDate] = useState<Dayjs|null>(null);
-	// const [pickupLocation, setPickupLocation] = useState<string>('BKK');
 	const [returnDate, setReturnDate] = useState<Dayjs|null>(null);
-	// const [returnLocation, setReturnLocation] = useState<string>('BKK');
 
 	return (
 		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[20px]">
@@ -95,10 +64,9 @@ export default function Reservations () {
 			<div className="w-auto bg-slate-100 rounded-xl p-10 content-center flex flex-col">
 			<form action = {addBooking} className="w-fit space-y-2">
 				<div className="text-medium text-gray-600 text-center">Pick-Up Date</div>
-				<LocationDateReserve onDateChange = {(value:Dayjs)=>{setPickupDate(value)}} /*onLocationChange={(value:string) => {setPickupLocation(value)}}*//>
+				<LocationDateReserve onDateChange = {(value:Dayjs)=>{setPickupDate(value)}}/>
 				<div className="text-medium text-gray-600 text-center">Return Date</div>
-				<LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}} /*onLocationChange={(value:string)=>{setReturnLocation(value)}}*//>
-				{/* <input type="time">dada</input> */}
+				<LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}}/>
 			</form>
 			<button className="block rounded-xl bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm my-7" onClick={addBooking}>
 				Reserve this Car

@@ -1,38 +1,22 @@
 'use client'
-import { useDispatch } from "react-redux";
 import deleteBooking from "@/libs/deleteBooking";
-import updateBooking from "@/libs/updateBooking";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function ReservationCart( { bookingJson ,token} : { bookingJson:BookingJson, token:string }){
-	
-	
-
-	// c = useAppSonst carItemselector( (state) =>
-	// 	state.cartSlice.carItems )
-	// const dispatch = useDispatch<AppDispatch>();
 
 	const DeleteBooking = async (bookingId:string) => {
 		try{
-			
 			const cars = await deleteBooking({ bookingId:bookingId, token:token})
-			
 		}
 		catch(error){
 			console.log(error)
 		}
 		window.location.reload();
 	}
-	
-	// useEffect (()=>{
-	// 	window.location.reload();
-	// }, [cars]);
 
 	return (
 		<>
 			<div className="mt-[40px]">
-			{/* <button className="mx-5 p-2 border rounded-xl bg-violet-200 hover:bg-violet-500" onClick={()=>{window.location.reload();}}>Refetch</button> */}
 			<div className="space-y-5">
 				{
 					bookingJson?

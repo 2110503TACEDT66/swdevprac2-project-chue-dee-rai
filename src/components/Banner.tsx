@@ -2,17 +2,10 @@
 import { useState } from 'react'
 import styles from './banner.module.css'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import { useSession } from 'next-auth/react'
-import Link from 'next/link'
 
 export default function Banner () {
 	const covers = ['/img/cover.jpg', '/img/cover2.jpg', '/img/cover3.jpg']
 	const [index, setIndex] = useState(0)
-	const router = useRouter()
-	
-	const {data: session} = useSession()
-	// console.log(session?.user)
 	
 	return (
 		<div className={styles.banner} onClick={ ()=>{setIndex(index+1) }}>

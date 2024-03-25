@@ -1,13 +1,8 @@
-// 'use client'
 import ReservationCart from "@/components/ReservationCart";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/libs/auth";
 import getBookings from "@/libs/getBookings";
-import { useEffect } from "react";
-import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
-
-
 
 export default async function CartPage (){
 	
