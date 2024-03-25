@@ -1,4 +1,4 @@
-import ReservationMenu from "@/components/ReservationMenu";
+//import ReservationMenu from "@/components/ReservationMenu";
 import styles from './reservations.module.css'
 import { Suspense } from "react";
 import { LinearProgress } from "@mui/material";
