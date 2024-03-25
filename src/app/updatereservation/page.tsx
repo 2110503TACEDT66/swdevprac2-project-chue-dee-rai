@@ -73,22 +73,23 @@ export default function Reservations () {
 
 	return (
 		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[40px]">
-			<div className="text-xl font-medium">Update Reservation</div>
+			<div className="text-xl font-medium">Update Booking</div>
 			{/* <div className="text-xl font-medium">Car: {model}</div> */}
 
 
-			<div className="w-fit space-y-2">
+			<div className="w-auto bg-slate-100 rounded-xl p-10 content-center flex flex-col">
 				<div className="text-medium text-left text-gray-600">Pick-Up Date</div>
 				<LocationDateReserve onDateChange = {(value:Dayjs)=>{setPickupDate(value)}} /*onLocationChange={(value:string) => {setPickupLocation(value)}}*//>
 				<div className="text-medium text-left text-gray-600">Return Date</div>
 				<LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}} /*onLocationChange={(value:string)=>{setReturnLocation(value)}}*//>
 				{/* <input type="time">dada</input> */}
+				<button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={UpdateBooking}>
+					Update this booking
+				</button>
 			</div>
 			
 			
-			<button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={UpdateBooking}>
-				Update this reservation
-			</button>
+			
 			
 		</main>
 	);

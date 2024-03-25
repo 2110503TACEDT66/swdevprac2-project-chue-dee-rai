@@ -86,11 +86,11 @@ export default function Reservations () {
 	// const [returnLocation, setReturnLocation] = useState<string>('BKK');
 
 	return (
-		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[40px]">
-			<div className="text-xl font-medium">New Reservation</div>
+		<main className="w-[100%] flex flex-col items-center space-y-4 mt-[20px]">
+			<div className="text-xl font-medium">New Booking</div>
 			<div className="text-xl font-medium">Car: {model}</div>
 
-			<div className="w-auto bg-slate-100 rounded-xl p-20 content-center flex flex-col">
+			<div className="w-auto bg-slate-100 rounded-xl p-10 content-center flex flex-col">
 			<form action = {addBooking} className="w-fit space-y-2">
 				<div className="text-medium text-gray-600 text-center">Pick-Up Date</div>
 				<LocationDateReserve onDateChange = {(value:Dayjs)=>{setPickupDate(value)}} /*onLocationChange={(value:string) => {setPickupLocation(value)}}*//>
