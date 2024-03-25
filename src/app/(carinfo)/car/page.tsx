@@ -2,7 +2,6 @@ import getCars from "@/libs/getCars";
 import CarCatalog from "@/components/CarCatalog";
 import { Suspense } from "react";
 import { LinearProgress } from "@mui/material";
-import { useSession } from "next-auth/react";
 import getUserProfile from "@/libs/getUserProfile";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/libs/auth";

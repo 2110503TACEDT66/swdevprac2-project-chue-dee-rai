@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getServerSession } from "next-auth";
 import getUserProfile from "@/libs/getUserProfile";
 import { authOptions } from "@/libs/auth";
+import { redirect } from "next/navigation";
 
 export default async function CarDetailPage( {params} : {params: {cid:string}}) {
 	
@@ -11,10 +12,10 @@ export default async function CarDetailPage( {params} : {params: {cid:string}}) 
 
 	const session = await getServerSession(authOptions)
 
-	/*if(!session || !session.user.token) {
+	if(!session || !session.user.token) {
 		redirect('/api/auth/signin')
-	}*/
-	if(!session || !session.user.token) return null
+	}
+	//if(!session || !session.user.token) return null
 	
 	const profile = await getUserProfile(session.user.token);
 
