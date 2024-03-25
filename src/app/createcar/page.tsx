@@ -52,43 +52,43 @@ export default function Register( ) {
 	}
 
 	return (
-		<form action = {addCar} className="rounded-3xl mx-[20%] my-10 bg-slate-50 flex flex-col text-center justify-items-center items-center" >
-			<div className="text-xl font-bold text-blue-700">New Car</div>
+		<form action = {addCar} className="rounded-3xl mx-[20%] py-5 my-10 bg-gray-200 flex flex-col text-center justify-items-center items-center" >
+			<div className="text-2xl font-bold text-black">New Car</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'name'>Name </label>
-				<input type = 'text' required id = "name" name = "name" placeholder="Name" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "name" name = "name" placeholder="Name" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'address'>Address </label>
-				<input type = 'text' required id = "address" name = "address" placeholder="Address" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "address" name = "address" placeholder="Address" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'district'>District </label>
-				<input type = 'text' required id = "district" name = "district" placeholder="District" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "district" name = "district" placeholder="District" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'province'>Province </label>
-				<input type = 'text' required id = "province" name = "province" placeholder="Province" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "province" name = "province" placeholder="Province" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'postalcode'>Postalcode </label>
-				<input type = 'text' required id = "postalcode" name = "postalcode" placeholder="Postalcode" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "postalcode" name = "postalcode" placeholder="Postalcode" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'tel'>Tel. </label>
-				<input type = 'text' required id = "tel" name = "tel" placeholder="telephone number" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "tel" name = "tel" placeholder="telephone number" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'region'>Region </label>
-				<input type = 'text' required id = "region" name = "region" placeholder="region" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "region" name = "region" placeholder="region" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'lice'>LicensePlate </label>
-				<input type = 'text' required id = "lice" name = "lice" placeholder="license plate" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "lice" name = "lice" placeholder="license plate" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<div className="flex items-center w-1/2 my-2">
 				<label className="w-auto block text-gray-700 pr-4" htmlFor = 'image'>ImgSrc </label>
-				<input type = 'text' required id = "image" name = "image" placeholder="URL" className="bg-white border-2 border-gray-200 rounded w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
+				<input type = 'text' required id = "image" name = "image" placeholder="URL" className="bg-white border-2 border-gray-200 rounded-3xl w-full p-2 text-gray-700 focus:outline-none focus:border-blue-400"/>
 			</div>
 			<button type="submit" className="bg-indigo-500 hover:bg-indigo-700 text-white p-2 rounded">Add Car</button>
 		</form>
