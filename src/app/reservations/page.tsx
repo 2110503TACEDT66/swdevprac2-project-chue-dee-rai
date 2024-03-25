@@ -36,8 +36,10 @@ export default function Reservations () {
 		// const startDate = addBookingForm.get("start")
 		// const endDate = addBookingForm.get("end")
 		// const createdAt = addBookingForm.get("createAt")
-
-			if (cid && model && pickupDate && returnDate && userid && token){
+			if(pickupDate && returnDate && pickupDate > returnDate){
+				alert("Pick-Up Date should come before Return Date");
+			}
+			else if (cid && model && pickupDate && returnDate && userid && token && (pickupDate < returnDate)){
 				
 				const item:ReservationItem = {
 					_id:"",

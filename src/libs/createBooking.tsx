@@ -15,7 +15,9 @@ export default async function createBooking( { reservetionItem, carid, token } :
 	})
 	console.log(response)
 
-	if (!response.ok){
+	if (response.status == 400){
+		alert("Cannot booking more than 3 booking");
+	} else if (!response.ok){
 		throw new Error("Failed to add-booking");
 	}
 
