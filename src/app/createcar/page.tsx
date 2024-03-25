@@ -4,7 +4,7 @@ import userSignUp from "@/libs/userSignup";
 import { getServerSession } from "next-auth";
 import { redirect, useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import createCar from "@/libs/createCar";
 import { useSession } from "next-auth/react";
 
