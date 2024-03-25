@@ -9,7 +9,7 @@ import getUserProfile from '@/libs/getUserProfile';
 export default async function TopMenu(){
 
 	const session = await getServerSession(authOptions)
-	var profile = {data:{name:""}};
+	var profile = {data:{name:"",role:""}};
 	if (session && session.user.token) {
 		profile = await getUserProfile(session?.user.token);
 	}
@@ -29,6 +29,9 @@ export default async function TopMenu(){
 			
 			
 			<div className='flex flex-row absolute right-0 h-full'>
+				{
+					(profile.data.role == "admin")?<div>Admin</div>:null
+				}
 				<TopMenuItem title= 'Booking' pageRef='/cart'/>
 				{
 					session? <Link href = "/api/auth/signout">
