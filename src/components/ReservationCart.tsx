@@ -19,12 +19,12 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 		try{
 			
 			const cars = await deleteBooking({ bookingId:bookingId, token:token})
-				
+			
 		}
 		catch(error){
 			console.log(error)
 		}
-		
+		window.location.reload();
 	}
 	
 	// useEffect (()=>{
