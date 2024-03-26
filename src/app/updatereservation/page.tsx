@@ -41,7 +41,10 @@ export default function Reservations () {
 
 		// try{
 			// console.log("hello world")
-			if (pickupDate && returnDate&& token && bookingid){
+			if(pickupDate && returnDate && pickupDate > returnDate){
+				alert("Pick-Up Date should come before Return Date");
+			}
+			if (pickupDate && returnDate&& token && bookingid && (pickupDate < returnDate)){
 				
 				const item:ReservationItem = {
 					_id:"",
