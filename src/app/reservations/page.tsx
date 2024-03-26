@@ -29,10 +29,6 @@ export default function Reservations () {
 	}
 
 	const addBooking = async () => {
-		// "use server"
-		// const startDate = addBookingForm.get("start")
-		// const endDate = addBookingForm.get("end")
-		// const createdAt = addBookingForm.get("createAt")
 			if(pickupDate && returnDate && pickupDate > returnDate){
 				alert("Pick-Up Date should come before Return Date");
 			}
@@ -50,7 +46,6 @@ export default function Reservations () {
 				
 				router.push("/cart")
 			}
-		
 	}
 
 	const [pickupDate, setPickupDate] = useState<Dayjs|null>(null);
