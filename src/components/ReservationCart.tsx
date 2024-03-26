@@ -2,7 +2,7 @@
 import deleteBooking from "@/libs/deleteBooking";
 import Link from "next/link";
 
-export default function ReservationCart( { bookingJson ,token} : { bookingJson:BookingJson, token:string }){
+export default function ReservationCart( { bookingJson ,token, role} : { bookingJson:BookingJson, token:string , role:string}){
 
 	const DeleteBooking = async (bookingId:string) => {
 		try{
@@ -22,7 +22,11 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 					bookingJson?
 					bookingJson.data.map((reservationItem:ReservationItem) => (
 						<div className="bg-slate-200 rounded px-5 mx-5 py-2 my-2" key = {reservationItem._id}>
-							<div className="text-xl">{reservationItem.user}</div>
+							{
+								(role == 'admin')?<div className="text-xl">{reservationItem.user}</div>
+								:null
+							}
+							
 							<div className="text-xl">Car:{reservationItem.car.name}</div>
 							<div className="text-sm">Pick-up : {reservationItem.startDate} </div>
 							<div className="text-sm">Return :  {reservationItem.endDate}</div>
