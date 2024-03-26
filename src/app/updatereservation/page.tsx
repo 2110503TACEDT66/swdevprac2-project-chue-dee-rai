@@ -34,13 +34,6 @@ export default function Reservations () {
 	}
 
 	const UpdateBooking = async () => {
-		// "use server"
-		// const startDate = addBookingForm.get("start")
-		// const endDate = addBookingForm.get("end")
-		// const createdAt = addBookingForm.get("createAt")
-
-		// try{
-			// console.log("hello world")
 			if(pickupDate && returnDate && pickupDate > returnDate){
 				alert("Pick-Up Date should come before Return Date");
 			}
@@ -59,14 +52,6 @@ export default function Reservations () {
 				console.log("redirect")
 		        router.push("/cart")
 			}
-		// } catch(error) {
-        //     if(isRedirectError(error)){
-        //         throw error;
-        //     }
-		// 	console.log(error)
-		// }
-		// revalidateTag("bookings")
-		// redirect("/cart")
 	}
 
 	const [pickupDate, setPickupDate] = useState<Dayjs|null>(null);
