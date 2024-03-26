@@ -22,10 +22,10 @@ export default function ReservationCart( { bookingJson ,token} : { bookingJson:B
 					bookingJson?
 					bookingJson.data.map((reservationItem:ReservationItem) => (
 						<div className="bg-slate-200 rounded px-5 mx-5 py-2 my-2" key = {reservationItem._id}>
-							<div className="text-xl">{reservationItem.car.name}</div>
+							<div className="text-xl">{reservationItem.user}</div>
+							<div className="text-xl">Car:{reservationItem.car.name}</div>
 							<div className="text-sm">Pick-up : {reservationItem.startDate} </div>
 							<div className="text-sm">Return :  {reservationItem.endDate}</div>
-							{/* <div className="text-md">Duration: {reservationItem.startDate}</div> */}
 							<div className="flex flex-row space-x-2 my-1">
 								<button className="block rounded-md bg-purple-600 hover:bg-red-600 px-3 py-2 text-white shadow-sm" onClick={()=>{DeleteBooking(reservationItem._id)}}>
 									Remove from Cart
