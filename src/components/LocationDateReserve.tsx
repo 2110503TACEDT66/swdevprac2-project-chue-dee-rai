@@ -19,14 +19,6 @@ export default function LocationDateReserve ({onDateChange, /*onLocationChange*/
 			<LocalizationProvider dateAdapter={AdapterDayjs}>
 				<DatePicker className="bg-white" value = {reserveDate} onChange={(value)=>{setReserveDate(value); onDateChange(value)}}/>
 			</LocalizationProvider>
-
-			{/* <Select variant="standard" name="location" id="location" 
-			onChange={ (e)=>{setLocation(e.target.value); onLocationChange(e.target.value)}} value={location} className="h-[2em] w-[200px]">
-				<MenuItem value = "BKK">Bangkok</MenuItem>
-				<MenuItem value="CNX">Chaing Mai</MenuItem>
-				<MenuItem value="HKT">Phuket</MenuItem>
-
-			</Select> */}
 		</div>
 	);
 }

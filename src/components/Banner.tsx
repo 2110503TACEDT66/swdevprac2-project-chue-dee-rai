@@ -18,9 +18,6 @@ export default function Banner () {
 				<h1 className='text-6xl my-3 text-white font-medium font-serif'>Car Rental</h1>
 				<h3 className='text-2xl text-white font-serif'>Get out and explore with Us</h3>
 			</div>
-			{/* <button className='bg-white text-cyan-600 border border-cyan-600 font-semibold py-2 px-2 m-2 rounded z-30 absolute bottom-0 right-0 hover:bg-cyan-600 hover:text-white hover:border-transparent' onClick={(e) => {e.stopPropagation(); router.push('/car')}}>
-				Select Your Travel Partner NOW
-			</button> */}
 		</div>
 	);
 }
