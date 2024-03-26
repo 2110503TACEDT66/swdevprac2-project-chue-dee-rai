@@ -28,7 +28,7 @@ export default async function TopMenu(){
 			
 			<div className='flex flex-row absolute right-0 h-full'>
 				{
-					(profile.data.role == "admin")?<div className='h-full px-2 text-indigo-200 text-center text-sm'>
+					(profile.data.role == "admin")?<div className='h-full px-2 text-indigo-200 text-center text-sm mt-auto mb-auto'>
 						Admin</div>:null
 				}
 				<TopMenuItem title= 'Booking' pageRef='/cart'/>
